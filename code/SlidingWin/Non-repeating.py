@@ -7,9 +7,10 @@ def non_repeat_substring(str1):
         #update the start_pointer
         if right_char in alpha_index:
             win_start = max(win_start,alpha_index[right_char]+1)
+            #win_start = alpha_index[right_char]+1 ?
         #insert the current char INDEX into the dict
         alpha_index[right_char] = win_end
         max_length = max(max_length,win_end-win_start+1)
     return max_length
 
-print(non_repeat_substring("abcdaaa"))
+print(non_repeat_substring("cde"))
