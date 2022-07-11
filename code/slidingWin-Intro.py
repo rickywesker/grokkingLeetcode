@@ -27,6 +27,6 @@ def main():
     K = 5
     result = find_average_of_subarray(K,[1,3,2,6,-1,4,1,8,2])
     result_2 = find_avg_slidingVer(K,[1,3,2,6,-1,4,1,8,2])
-    print(f"Average of subarray of size {K}: " + str(result))
-    print(f"Average of subarray of size {K}: " + str(result_2))
+    print(f"Average of subarray of size {K}: {str(result)}")
+    print(f"Average of subarray of size {K}: {str(result_2)}")
 main()

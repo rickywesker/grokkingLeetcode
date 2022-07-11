@@ -9,7 +9,6 @@ def longest_repeating_substr_replace(str1,k):
             freq_dict[right_char] = 0
         freq_dict[right_char] += 1
         max_repeating_cnt = max(max_repeating_cnt,freq_dict[right_char])
-
     #check the current window 
         if win_end - win_start + 1 - max_repeating_cnt > k: #remaining 可替代的数量
             left_char = str1[win_start]
@@ -25,14 +24,13 @@ def length_of_longest_substring(arr, k):
     for win_end in range(len(arr)):
         if arr[win_end] == 1:
             ones_cnt += 1
-        
-        
-        if win_end - win_start + 1 - ones_cnt > k:
-            if arr[win_start] == 1:
-                ones_cnt -= 1
+
+
+        if win_end - win_start + 1 - ones_cnt > k and arr[win_start] == 1:
+            ones_cnt -= 1
         win_start += 1
-        
+
         max_length = max(max_length,win_end - win_start + 1)
-    
+
     return max_length
 print(longest_repeating_substr_replace("abbcb",0))
