@@ -2,6 +2,8 @@ class Solution:
     def __init__(self):
         self.table = [0,1]
     def fib(self,n):
+        if (n == 0 or n == 1):
+            return self.table[n]
         self.make_table(n)
         return self.table[n]
     
